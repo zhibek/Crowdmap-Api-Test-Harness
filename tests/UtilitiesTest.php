@@ -1,12 +1,12 @@
 <?php
 require_once('./lib/CrowdmapApiTestCase.php');
 
-class MiscTest extends CrowdmapApiTestCase
+class UtilitiesTest extends CrowdmapApiTestCase
 {
 
     public function providerGetHeartbeat()
     {
-        return $this->getProvider(null, 'getHeartbeatResponse.json');
+        return $this->getProvider(null, 'utilities/getHeartbeatResponse.json');
     }
 
     /**
@@ -21,7 +21,7 @@ class MiscTest extends CrowdmapApiTestCase
 
     public function providerGetAbout()
     {
-        return $this->getProvider(null, 'getAboutResponse.json');
+        return $this->getProvider(null, 'utilities/getAboutResponse.json');
     }
 
     /**

@@ -1,7 +1,7 @@
 <?php
 require_once('./lib/CrowdmapApiTestCase.php');
 
-class SessionTest extends CrowdmapApiTestCase
+class SessionsTest extends CrowdmapApiTestCase
 {
 
     public function providerPostSessionLoginValid()
@@ -16,7 +16,7 @@ class SessionTest extends CrowdmapApiTestCase
             'user_id' => $sampleUserId,
         );
 
-        return $this->getProvider('postSessionLoginRequest.json', 'postSessionLoginResponseValid.json', $replaceRequest, $replaceResponse);
+        return $this->getProvider('sessions/postSessionLoginRequest.json', 'sessions/postSessionLoginResponseValid.json', $replaceRequest, $replaceResponse);
     }
 
     /**
@@ -39,7 +39,7 @@ class SessionTest extends CrowdmapApiTestCase
             'error' => 'That user does not exist.',
         );
 
-        return $this->getProvider('postSessionLoginRequest.json', 'postSessionLoginResponseInvalid.json', $replaceRequest, $replaceResponse);
+        return $this->getProvider('sessions/postSessionLoginRequest.json', 'sessions/postSessionLoginResponseInvalid.json', $replaceRequest, $replaceResponse);
     }
 
     /**

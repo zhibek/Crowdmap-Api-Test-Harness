@@ -1,7 +1,7 @@
 <?php
 require_once('./lib/CrowdmapApiTestCase.php');
 
-class UserTest extends CrowdmapApiTestCase
+class UsersTest extends CrowdmapApiTestCase
 {
 
     public function providerGetUsersSingleResponse()
@@ -16,7 +16,7 @@ class UserTest extends CrowdmapApiTestCase
             'user_id' => $sampleUserId,
         );*/
 
-        return $this->getProvider(null, 'getUsersSingleResponse.json');
+        return $this->getProvider(null, 'users/getUsersSingleResponse.json');
     }
 
     /**
